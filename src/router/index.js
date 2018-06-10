@@ -7,7 +7,6 @@ export default new Router({
   mode: 'history',
   routes: [
     {path: '/', name: 'index', component: index},
-    {path: '/about', name: 'about', component: about},
-    {path: '/render', name: 'render', component: render}
+    {path: '/about', name: 'about', component: about}
   ]
 })
