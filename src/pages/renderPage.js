@@ -6,7 +6,20 @@ export default{
         padding: '20px'
       },
       attrs: {
-        title: '设置了原生属性'
+        id: 'aaa'
+      },
+      domProps: {
+        // id: 'bbb'
+      },
+      // on: {
+      //   click: (context) => {
+      //     console.log(context)
+      //   }
+      // },
+      nativeOn: {
+        click: () => {
+          console.log(1)
+        }
       }
     },
     [

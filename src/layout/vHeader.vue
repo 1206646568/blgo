@@ -21,7 +21,7 @@ export default {
     return {
       nav: [
         { href: '/about', name: '关于我' },
-        { href: '/', name: '模板分享' },
+        { href: '/renderPage', name: '模板分享' },
         { href: '/', name: '学无止境' },
         { href: '/', name: '慢生活' },
         { href: '/', name: '时间轴' },

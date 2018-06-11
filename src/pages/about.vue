@@ -1,6 +1,6 @@
 <template>
   <div>
-    <contentTel :setLink="setLink">
+    <!--<contentTel :setLink="setLink">
       <template slot="leftContent">
         <ul>
           <p>杨青，女，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。我入行早，大家也亲切的叫我&ldquo;青姐&rdquo;。
@@ -49,7 +49,7 @@
           </ul>
         </div>
       </template>
-    </contentTel>
+    </contentTel>-->
   </div>
 </template>
 <script>
