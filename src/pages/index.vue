@@ -6,7 +6,8 @@
       <div class="blank"></div>
       <!--left 博文显示-->
       <div class="blogsbox">
-        文章内容<!--标题-->
+        文章内容
+        <!--标题-->
         <div class="blogs" data-scroll-reveal="enter bottom over 1s">
           <h3 class="blogtitle">
             <a href="/" target="_blank">别让这些闹心的套路，毁了你的网页设计!</a>
@@ -19,7 +20,7 @@
           </span>
           <p class="blogtext">
             <!--超出隐藏功能-->
-            如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... 
+            如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！...
           </p>
           <div class="bloginfo">
             <ul>
@@ -31,13 +32,24 @@
                 <a href="/">学无止境</a>
                 <!--分类-->
               </li>
-              <li class="timer">2018-5-13<!--发布时间--></li>
+              <li class="timer">2018-5-13
+                <!--发布时间-->
+              </li>
               <li class="view">
-                <span>34567</span>已阅读<!--是否已读功能--></li>
-              <li class="like">9999<!--点赞功能--></li>
+                <span>34567</span>已阅读
+                <!--是否已读功能-->
+              </li>
+              <li class="like">9999
+                <!--点赞功能-->
+              </li>
             </ul>
           </div>
         </div>
+        <!--函数组件-->
+        <tpl :columns="[{key:'1'}]" :data="[{col:'1'}]">
+          <p>default</p>
+          <p slot="slotA">slotA</p>
+        </tpl>
       </div>
       <!--right推荐-->
       <div class="sidebar">
@@ -189,12 +201,22 @@
   </div>
 </template>
 <script>
+import tpl from './tpl.js'
 import picsbox from '@/components/public/picsbox'
 export default {
-  components: { picsbox },
+  components: { picsbox, tpl },
   data () {
     return {
 
+    }
+  },
+  methods: {
+    deleteCol () {
+      var arr = ['', true, false]
+      let isTrue = parseInt(2 * Math.random()) + 1
+      arr[isTrue] && console.log('我执行并删除了一条记录')
+      arr[isTrue] || console.log('删除失败')
+      return arr[isTrue]
     }
   }
 }
